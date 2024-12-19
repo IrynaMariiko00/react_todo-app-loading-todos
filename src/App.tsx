@@ -18,9 +18,7 @@ export const App: React.FC = () => {
     setError('');
 
     getTodos()
-      .then(todosFromApi => {
-        setTodos(todosFromApi);
-      })
+      .then(setTodos)
       .catch(() => {
         setError('Unable to load todos');
       });
